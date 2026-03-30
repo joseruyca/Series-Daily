@@ -1,42 +1,46 @@
 export const friendsTriviaChallenges = [
   {
     date: "2026-03-30",
-    questionEs: "¿En qué trabaja Chandler?",
-    questionEn: "What does Chandler do for a living?",
-    options: ["Publicidad", "Actor", "Paleontólogo", "Chef"],
-    answerEs: "Publicidad",
-    answerEn: "Advertising",
-    explanationEs: "Chandler trabaja en análisis estadístico y reconfiguración de datos en publicidad.",
-    explanationEn: "Chandler works in statistical analysis and data reconfiguration in advertising."
-  },
-  {
-    date: "2026-03-31",
     questionEs: "¿Cómo se llama el hijo de Ross?",
     questionEn: "What is the name of Ross's son?",
-    options: ["Ben", "Mike", "Jack", "Paul"],
+    optionsEs: ["Ben", "Mike", "Jack", "Paul"],
+    optionsEn: ["Ben", "Mike", "Jack", "Paul"],
     answerEs: "Ben",
     answerEn: "Ben",
     explanationEs: "El hijo de Ross con Carol se llama Ben.",
-    explanationEn: "Ross's son with Carol is named Ben."
+    explanationEn: "Ross and Carol's son is named Ben."
+  },
+  {
+    date: "2026-03-31",
+    questionEs: "¿Cuál es el trabajo de Monica?",
+    questionEn: "What is Monica's job?",
+    optionsEs: ["Chef", "Abogada", "Diseñadora", "Profesora"],
+    optionsEn: ["Chef", "Lawyer", "Designer", "Teacher"],
+    answerEs: "Chef",
+    answerEn: "Chef",
+    explanationEs: "Monica trabaja como chef profesional durante la serie.",
+    explanationEn: "Monica works as a professional chef during the series."
   },
   {
     date: "2026-04-01",
-    questionEs: "¿Cuál es el trabajo de Monica?",
-    questionEn: "What is Monica's job?",
-    options: ["Chef", "Abogada", "Diseñadora", "Profesora"],
-    answerEs: "Chef",
-    answerEn: "Chef",
-    explanationEs: "Monica es chef profesional.",
-    explanationEn: "Monica is a professional chef."
+    questionEs: "¿Cómo se llama el café donde se reúne el grupo?",
+    questionEn: "What is the coffee shop where the group meets called?",
+    optionsEs: ["Central Perk", "Central Coffee", "Perk House", "Daily Beans"],
+    optionsEn: ["Central Perk", "Central Coffee", "Perk House", "Daily Beans"],
+    answerEs: "Central Perk",
+    answerEn: "Central Perk",
+    explanationEs: "Central Perk es uno de los lugares más icónicos de Friends.",
+    explanationEn: "Central Perk is one of the most iconic places in Friends."
   },
   {
     date: "2026-04-02",
-    questionEs: "¿Dónde se reúne normalmente el grupo?",
-    questionEn: "Where does the group usually hang out?",
-    options: ["Central Perk", "El apartamento de Ross", "Un restaurante", "La oficina"],
-    answerEs: "Central Perk",
-    answerEn: "Central Perk",
-    explanationEs: "Central Perk es el lugar icónico donde se reúnen casi siempre.",
-    explanationEn: "Central Perk is the iconic place where they usually meet."
+    questionEs: "¿Qué frase usa Joey para ligar?",
+    questionEn: "Which line does Joey use to flirt?",
+    optionsEs: ["How you doin'?", "Could I be any more...", "Oh. My. God.", "We were on a break!"],
+    optionsEn: ["How you doin'?", "Could I be any more...", "Oh. My. God.", "We were on a break!"],
+    answerEs: "How you doin'?",
+    answerEn: "How you doin'?",
+    explanationEs: "Es la frase más famosa de Joey Tribbiani.",
+    explanationEn: "It's Joey Tribbiani's most famous line."
   }
 ];

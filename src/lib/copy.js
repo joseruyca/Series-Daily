@@ -8,14 +8,14 @@ export const copy = {
     },
     home: {
       eyebrow: "Retos diarios de series míticas",
-      title: "Tu dosis diaria de series.",
-      subtitle: "Diseño rápido, visual y pensado para móvil.",
+      title: "Series míticas. Cada día.",
+      subtitle: "Entra, juega y vuelve mañana.",
       infoPrimaryLabel: "Hoy",
       infoPrimaryValue: "Friends · 5 modos",
       infoSecondaryLabel: "Interfaz",
       infoSecondaryValue: "Mobile first",
       chooseSeries: "Elige serie",
-      chooseSeriesCopy: "Desliza, entra y juega. Todo claro y sin ruido."
+      chooseSeriesCopy: "Acceso rápido a cada serie y a sus modos diarios."
     },
     status: {
       available: "Disponible",
@@ -32,7 +32,7 @@ export const copy = {
     series: {
       friends: {
         kicker: "Ya jugable",
-        description: "Personaje, frases, emojis y foto revelada."
+        description: "Personaje, frases, emojis, trivia y foto revelada."
       },
       office: {
         kicker: "En cola",
@@ -49,10 +49,10 @@ export const copy = {
     },
     friends: {
       eyebrow: "Friends · Daily hub",
-      title: "Cuatro modos. Mucho mejor.",
-      subtitle: "Cada día puedes jugar a personaje, frases, emojis y foto revelada.",
+      title: "Friends, hoy.",
+      subtitle: "Cinco modos diarios en una interfaz más clara y rápida.",
       statusLabel: "Hoy",
-      statusValue: "Character · Quote · Emoji · Reveal",
+      statusValue: "Character · Quote · Emoji · Trivia · Reveal",
       cards: {
         characterTitle: "Modo personaje",
         characterDesc: "Deducción por atributos con una interfaz mucho más clara.",
@@ -60,10 +60,10 @@ export const copy = {
         quoteDesc: "Frases icónicas con respuesta rápida y visual.",
         emojiTitle: "Modo emojis",
         emojiDesc: "Adivina el personaje a partir de emojis.",
+        triviaTitle: "Modo trivia",
+        triviaDesc: "Pregunta diaria de la serie con respuesta rápida.",
         pixelTitle: "Modo foto revelada",
         pixelDesc: "Cinco intentos para descubrir quién es.",
-        triviaTitle: "Modo trivia",
-        triviaDesc: "Pregunta diaria rápida sobre la serie.",
         action: "Jugar hoy"
       }
     },
@@ -93,15 +93,15 @@ export const copy = {
           title: "Modo emojis",
           subtitle: "Lee los emojis y adivina el personaje."
         },
+        trivia: {
+          eyebrow: "Friends · Trivia",
+          title: "Modo trivia",
+          subtitle: "Una pregunta diaria de la serie."
+        },
         pixel: {
           eyebrow: "Friends · Reveal",
           title: "Modo foto revelada",
           subtitle: "Tienes cinco intentos y la imagen se va revelando."
-        },
-        trivia: {
-          eyebrow: "Friends · Trivia",
-          title: "Modo trivia",
-          subtitle: "Una pregunta diaria sobre Friends con respuesta rápida."
         }
       }
     },
@@ -181,14 +181,14 @@ export const copy = {
     },
     home: {
       eyebrow: "Daily challenges for iconic shows",
-      title: "Your daily dose of TV series.",
-      subtitle: "Fast, visual and built for mobile.",
+      title: "Iconic series. Every day.",
+      subtitle: "Jump in, play, come back tomorrow.",
       infoPrimaryLabel: "Today",
       infoPrimaryValue: "Friends · 5 modes",
       infoSecondaryLabel: "Interface",
       infoSecondaryValue: "Mobile first",
       chooseSeries: "Choose series",
-      chooseSeriesCopy: "Swipe, enter and play. Everything stays clear and focused."
+      chooseSeriesCopy: "Quick access to each series and its daily modes."
     },
     status: {
       available: "Available",
@@ -205,7 +205,7 @@ export const copy = {
     series: {
       friends: {
         kicker: "Live now",
-        description: "Character, quotes, emojis and pixel reveal."
+        description: "Character, quotes, emoji, trivia and reveal."
       },
       office: {
         kicker: "Queued",
@@ -222,10 +222,10 @@ export const copy = {
     },
     friends: {
       eyebrow: "Friends · Daily hub",
-      title: "Four modes. Much better.",
-      subtitle: "Each day you can play character, quotes, emoji and reveal.",
+      title: "Friends, today.",
+      subtitle: "Five daily modes in a cleaner, faster interface.",
       statusLabel: "Today",
-      statusValue: "Character · Quote · Emoji · Reveal",
+      statusValue: "Character · Quote · Emoji · Trivia · Reveal",
       cards: {
         characterTitle: "Character mode",
         characterDesc: "Attribute-based deduction with a much clearer interface.",
@@ -233,10 +233,10 @@ export const copy = {
         quoteDesc: "Iconic quotes with fast, visual answers.",
         emojiTitle: "Emoji mode",
         emojiDesc: "Guess the character from emojis.",
+        triviaTitle: "Trivia mode",
+        triviaDesc: "A daily show question with a quick answer.",
         pixelTitle: "Reveal mode",
         pixelDesc: "Five attempts to discover who it is.",
-        triviaTitle: "Trivia mode",
-        triviaDesc: "A fast daily question about the show.",
         action: "Play today"
       }
     },
@@ -266,15 +266,15 @@ export const copy = {
           title: "Emoji mode",
           subtitle: "Read the emojis and guess the character."
         },
+        trivia: {
+          eyebrow: "Friends · Trivia",
+          title: "Trivia mode",
+          subtitle: "One daily question from the series."
+        },
         pixel: {
           eyebrow: "Friends · Reveal",
           title: "Reveal mode",
           subtitle: "You have five attempts and the image reveals itself."
-        },
-        trivia: {
-          eyebrow: "Friends · Trivia",
-          title: "Trivia mode",
-          subtitle: "One daily question about Friends with quick answers."
         }
       }
     },

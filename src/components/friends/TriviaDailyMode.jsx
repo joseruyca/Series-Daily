@@ -6,16 +6,8 @@ import { resolveDailyChallenge, buildProgressKey } from "@/src/lib/daily";
 
 function pickLocalizedValue(item, baseKey, lang) {
   if (!item) return "";
-  if (lang === "en") return item[`${baseKey}En`] ?? item[baseKey] ?? "";
-  return item[`${baseKey}Es`] ?? item[baseKey] ?? item[`${baseKey}En`] ?? "";
-}
-
-function getLocalizedOptions(item, lang) {
-  if (lang === "en") {
-    if (item.optionsEn?.length) return item.optionsEn;
-    if (item.optionsEs?.length) return item.optionsEs;
-  }
-  return item.optionsEs ?? item.options ?? [];
+  if (lang === "en") return item[`${baseKey}En`] ?? item[`${baseKey}Es`] ?? item[baseKey] ?? "";
+  return item[`${baseKey}Es`] ?? item[`${baseKey}En`] ?? item[baseKey] ?? "";
 }
 
 export default function TriviaDailyMode({ challenges, lang, t }) {
@@ -44,23 +36,23 @@ export default function TriviaDailyMode({ challenges, lang, t }) {
 
   if (!challenge) return null;
 
-  const dateLabel = formatMadridLongDate(challenge.date, lang);
   const done = Boolean(result);
-  const questionText = pickLocalizedValue(challenge, "question", lang);
-  const explanationText = pickLocalizedValue(challenge, "explanation", lang);
-  const answerText = pickLocalizedValue(challenge, "answer", lang);
-  const options = getLocalizedOptions(challenge, lang);
+  const dateLabel = formatMadridLongDate(challenge.date, lang);
+  const question = pickLocalizedValue(challenge, "question", lang);
+  const options = pickLocalizedValue(challenge, "options", lang);
+  const answer = pickLocalizedValue(challenge, "answer", lang);
+  const explanation = pickLocalizedValue(challenge, "explanation", lang);
 
   function handleSelect(option) {
     if (done) return;
-    const next = { selected: option, correct: option === answerText };
+    const next = { selected: option, correct: option === answer };
     setResult(next);
     window.localStorage.setItem(progressKey, JSON.stringify(next));
   }
 
   function getClassName(option) {
     if (!done) return "friends-answer-btn";
-    if (option === answerText) return "friends-answer-btn is-correct";
+    if (option === answer) return "friends-answer-btn is-correct";
     if (result?.selected === option) return "friends-answer-btn is-wrong";
     return "friends-answer-btn is-muted";
   }
@@ -82,20 +74,14 @@ export default function TriviaDailyMode({ challenges, lang, t }) {
           <div className="friends-prompt-icon" aria-hidden="true">🧠</div>
           <div>
             <span className="friends-mini-label">Trivia</span>
-            <h2>{questionText}</h2>
+            <h2>{question}</h2>
           </div>
         </div>
       </div>
 
       <div className="friends-answer-grid">
         {options.map((option) => (
-          <button
-            key={option}
-            type="button"
-            className={getClassName(option)}
-            onClick={() => handleSelect(option)}
-            disabled={done}
-          >
+          <button key={option} type="button" className={getClassName(option)} onClick={() => handleSelect(option)} disabled={done}>
             {option}
           </button>
         ))}
@@ -113,10 +99,10 @@ export default function TriviaDailyMode({ challenges, lang, t }) {
             </div>
             <div className="friends-result-row">
               <span>{t.challenge.correctAnswer}</span>
-              <strong>{answerText}</strong>
+              <strong>{answer}</strong>
             </div>
           </div>
-          <p className="friends-result-text">{explanationText}</p>
+          <p className="friends-result-text">{explanation}</p>
           <p className="friends-result-text">{t.challenge.tomorrow}</p>
         </div>
       ) : null}

@@ -5,7 +5,7 @@ import { getMadridDateKey, formatMadridLongDate } from "@/src/lib/date";
 import { resolveDailyChallenge, buildProgressKey } from "@/src/lib/daily";
 
 function normalizeValue(value) {
-  return value.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").trim();
+  return value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
 }
 
 function pickLocalizedValue(item, baseKey, lang) {
@@ -31,6 +31,15 @@ function loadFirstAvailableImage(candidates) {
     tryNext();
   });
 }
+
+const SUGGESTIONS = [
+  "Chandler Bing",
+  "Rachel Green",
+  "Ross Geller",
+  "Joey Tribbiani",
+  "Monica Geller",
+  "Phoebe Buffay",
+];
 
 export default function PixelDailyMode({ challenges, lang, t }) {
   const todayKey = getMadridDateKey();
@@ -91,7 +100,6 @@ export default function PixelDailyMode({ challenges, lang, t }) {
   const remaining = Math.max(0, 5 - progress.attempts);
   const promptText = pickLocalizedValue(challenge, "prompt", lang);
   const explanationText = pickLocalizedValue(challenge, "explanation", lang);
-  const suggestions = ["Chandler Bing", "Rachel Green", "Ross Geller", "Joey Tribbiani", "Monica Geller", "Phoebe Buffay"];
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -135,36 +143,31 @@ export default function PixelDailyMode({ challenges, lang, t }) {
         {imageReady ? <canvas ref={canvasRef} className="friends-reveal-canvas" /> : <div className="friends-reveal-missing">{t.challenge.imageMissing}</div>}
       </div>
 
-      <div className="friends-reveal-meta">
-        <div className="friends-play-pill">
-          <span>{t.challenge.attemptsLabel}</span>
-          <strong>{progress.attempts} / 5</strong>
-        </div>
-      </div>
-
       <form className="friends-reveal-form" onSubmit={handleSubmit}>
-        <input type="text" className="friends-reveal-input" placeholder={t.challenge.inputPlaceholder} value={guess} onChange={(event) => setGuess(event.target.value)} disabled={progress.finished} autoComplete="off" spellCheck="false" list="friends-reveal-list" />
+        <input
+          list="friends-reveal-list"
+          type="text"
+          className="friends-reveal-input"
+          placeholder={t.challenge.inputPlaceholder}
+          value={guess}
+          onChange={(event) => setGuess(event.target.value)}
+          disabled={progress.finished}
+          autoComplete="off"
+          spellCheck="false"
+        />
         <datalist id="friends-reveal-list">
-          {suggestions.map((name) => (
+          {SUGGESTIONS.map((name) => (
             <option key={name} value={name} />
           ))}
         </datalist>
         <button type="submit" className="friends-reveal-submit" disabled={progress.finished}>{t.challenge.submit}</button>
       </form>
 
-      <div className="friends-quick-picks">
-        <span className="friends-mini-label">{lang === "en" ? "Suggestions" : "Sugerencias"}</span>
-        <div className="friends-quick-picks__row">
-          {suggestions.map((name) => (
-            <button
-              key={name}
-              type="button"
-              className="friends-quick-pick"
-              onClick={() => !progress.finished && setGuess(name)}
-              disabled={progress.finished}
-            >
-              {name}
-            </button>
+      <div className="quick-picks">
+        <span className="quick-picks__label">{lang === "en" ? "Suggestions" : "Sugerencias"}</span>
+        <div className="quick-picks__grid">
+          {SUGGESTIONS.map((name) => (
+            <button key={name} type="button" className="quick-pick" disabled={progress.finished} onClick={() => setGuess(name)}>{name}</button>
           ))}
         </div>
       </div>

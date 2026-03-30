@@ -68,6 +68,7 @@ export default function CharacterDailyMode({ challenges, profiles, lang, t }) {
 
   const dateLabel = formatMadridLongDate(challenge.date, lang);
   const attributes = ["group", "job", "home", "romance", "vibe"];
+  const quickNames = profiles.slice(0, 6).map((item) => item.name);
 
   function labelFor(type, value) {
     return labels[type][value] || value;
@@ -154,6 +155,15 @@ export default function CharacterDailyMode({ challenges, profiles, lang, t }) {
       </form>
 
       {error ? <p className="classic-error">{error}</p> : null}
+
+      <div className="quick-picks">
+        <span className="quick-picks__label">{lang === "en" ? "Suggestions" : "Sugerencias"}</span>
+        <div className="quick-picks__grid">
+          {quickNames.map((name) => (
+            <button key={name} type="button" className="quick-pick" disabled={progress.finished} onClick={() => setInput(name)}>{name}</button>
+          ))}
+        </div>
+      </div>
 
       <div className="legend-row">
         <span className="legend-pill is-match">{t.classic.legendMatch}</span>

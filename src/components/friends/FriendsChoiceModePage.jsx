@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useLanguage } from "@/src/hooks/useLanguage";
 import LanguageSwitch from "@/src/components/home/LanguageSwitch";
 import ChoiceDailyMode from "@/src/components/friends/ChoiceDailyMode";
+import TriviaDailyMode from "@/src/components/friends/TriviaDailyMode";
 
 export default function FriendsChoiceModePage({ mode, challenges }) {
   const { lang, setLang, t } = useLanguage();
@@ -28,12 +29,11 @@ export default function FriendsChoiceModePage({ mode, challenges }) {
         <p>{pageCopy.subtitle}</p>
       </section>
 
-      <ChoiceDailyMode
-        mode={mode}
-        challenges={challenges}
-        lang={lang}
-        t={t}
-      />
+      {mode === "trivia" ? (
+        <TriviaDailyMode challenges={challenges} lang={lang} t={t} />
+      ) : (
+        <ChoiceDailyMode mode={mode} challenges={challenges} lang={lang} t={t} />
+      )}
     </main>
   );
 }
