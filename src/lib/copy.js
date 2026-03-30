@@ -11,7 +11,7 @@ export const copy = {
       title: "Tu dosis diaria de series.",
       subtitle: "Diseño rápido, visual y pensado para móvil.",
       infoPrimaryLabel: "Hoy",
-      infoPrimaryValue: "Friends · 4 modos",
+      infoPrimaryValue: "Friends · 5 modos",
       infoSecondaryLabel: "Interfaz",
       infoSecondaryValue: "Mobile first",
       chooseSeries: "Elige serie",
@@ -62,6 +62,8 @@ export const copy = {
         emojiDesc: "Adivina el personaje a partir de emojis.",
         pixelTitle: "Modo foto revelada",
         pixelDesc: "Cinco intentos para descubrir quién es.",
+        triviaTitle: "Modo trivia",
+        triviaDesc: "Pregunta diaria rápida sobre la serie.",
         action: "Jugar hoy"
       }
     },
@@ -95,6 +97,11 @@ export const copy = {
           eyebrow: "Friends · Reveal",
           title: "Modo foto revelada",
           subtitle: "Tienes cinco intentos y la imagen se va revelando."
+        },
+        trivia: {
+          eyebrow: "Friends · Trivia",
+          title: "Modo trivia",
+          subtitle: "Una pregunta diaria sobre Friends con respuesta rápida."
         }
       }
     },
@@ -177,7 +184,7 @@ export const copy = {
       title: "Your daily dose of TV series.",
       subtitle: "Fast, visual and built for mobile.",
       infoPrimaryLabel: "Today",
-      infoPrimaryValue: "Friends · 4 modes",
+      infoPrimaryValue: "Friends · 5 modes",
       infoSecondaryLabel: "Interface",
       infoSecondaryValue: "Mobile first",
       chooseSeries: "Choose series",
@@ -228,6 +235,8 @@ export const copy = {
         emojiDesc: "Guess the character from emojis.",
         pixelTitle: "Reveal mode",
         pixelDesc: "Five attempts to discover who it is.",
+        triviaTitle: "Trivia mode",
+        triviaDesc: "A fast daily question about the show.",
         action: "Play today"
       }
     },
@@ -261,6 +270,11 @@ export const copy = {
           eyebrow: "Friends · Reveal",
           title: "Reveal mode",
           subtitle: "You have five attempts and the image reveals itself."
+        },
+        trivia: {
+          eyebrow: "Friends · Trivia",
+          title: "Trivia mode",
+          subtitle: "One daily question about Friends with quick answers."
         }
       }
     },

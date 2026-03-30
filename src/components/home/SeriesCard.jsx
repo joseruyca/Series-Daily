@@ -49,7 +49,7 @@ export default function SeriesCard({
 
   const content = (
     <article
-      className={`series-card theme-${theme} ${active ? "is-active" : ""} ${available ? "is-available" : "is-locked"}`}
+      className={`series-card series-card-pro theme-${theme} ${active ? "is-active" : ""} ${available ? "is-available" : "is-locked"}`}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleLeave}
       onMouseEnter={() => setActive(true)}

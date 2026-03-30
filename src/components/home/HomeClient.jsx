@@ -20,11 +20,11 @@ export default function HomeClient() {
   }, [t]);
 
   return (
-    <main className="page-shell">
+    <main className="page-shell home-shell-pro">
       <div className="backdrop-orb orb-a" />
       <div className="backdrop-orb orb-b" />
 
-      <header className="page-header">
+      <header className="page-header home-header-pro">
         <div className="brand">
           <span className="brand-mark" />
           <div>
@@ -36,33 +36,42 @@ export default function HomeClient() {
         <LanguageSwitch lang={lang} setLang={setLang} />
       </header>
 
-      <section className="hero">
-        <span className="eyebrow">{t.home.eyebrow}</span>
-        <h1>{t.home.title}</h1>
-        <p>{t.home.subtitle}</p>
+      <section className="hero hero-pro">
+        <div className="hero-pro__content">
+          <span className="eyebrow">{t.home.eyebrow}</span>
+          <h1>{t.home.title}</h1>
+          <p>{t.home.subtitle}</p>
 
-        <div className="hero-inline">
-          <div className="info-pill">
-            <span className="info-pill__label">{t.home.infoPrimaryLabel}</span>
-            <strong className="info-pill__value">{t.home.infoPrimaryValue}</strong>
+          <div className="hero-pro__stats">
+            <div className="hero-stat">
+              <span>{t.home.infoPrimaryLabel}</span>
+              <strong>{t.home.infoPrimaryValue}</strong>
+            </div>
+            <div className="hero-stat">
+              <span>{t.home.infoSecondaryLabel}</span>
+              <strong>{t.home.infoSecondaryValue}</strong>
+            </div>
           </div>
+        </div>
 
-          <div className="info-pill">
-            <span className="info-pill__label">{t.home.infoSecondaryLabel}</span>
-            <strong className="info-pill__value">{t.home.infoSecondaryValue}</strong>
+        <div className="hero-spotlight">
+          <div className="hero-spotlight__card">
+            <span className="hero-spotlight__label">Today</span>
+            <h2>Friends</h2>
+            <p>Character · Quote · Emoji · Reveal · Trivia</p>
           </div>
         </div>
       </section>
 
-      <section className="section-card">
-        <div className="section-head">
+      <section className="section-card section-card-pro">
+        <div className="section-head section-head-pro">
           <div>
             <h2>{t.home.chooseSeries}</h2>
             <p>{t.home.chooseSeriesCopy}</p>
           </div>
         </div>
 
-        <div className="series-rail">
+        <div className="series-rail series-rail-pro">
           {cards.map((card) => (
             <SeriesCard
               key={card.id}
