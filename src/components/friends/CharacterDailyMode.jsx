@@ -12,7 +12,7 @@ function normalizeValue(value) {
     .trim();
 }
 
-export default function CharacterDailyMode({ challenges, profiles, lang, t }) {
+export default function CharacterDailyMode({ series = "friends", challenges, profiles, lang, t }) {
   const todayKey = getMadridDateKey();
 
   const challenge = useMemo(() => resolveDailyChallenge(challenges, todayKey), [challenges, todayKey]);
@@ -22,8 +22,8 @@ export default function CharacterDailyMode({ challenges, profiles, lang, t }) {
   }, [challenge, profiles]);
 
   const progressKey = useMemo(
-    () => buildProgressKey("friends", "character", challenge ? challenge.date : todayKey),
-    [challenge, todayKey]
+    () => buildProgressKey(series, "character", challenge ? challenge.date : todayKey),
+    [challenge, series, todayKey]
   );
 
   const [input, setInput] = useState("");
@@ -68,7 +68,6 @@ export default function CharacterDailyMode({ challenges, profiles, lang, t }) {
 
   const dateLabel = formatMadridLongDate(challenge.date, lang);
   const attributes = ["group", "job", "home", "romance", "vibe"];
-  const quickNames = profiles.slice(0, 6).map((item) => item.name);
 
   function labelFor(type, value) {
     return labels[type][value] || value;
@@ -114,17 +113,11 @@ export default function CharacterDailyMode({ challenges, profiles, lang, t }) {
   }
 
   return (
-    <section className="classic-shell">
-      <div className="game-toolbar">
-        <div className="date-badge">
-          <span>{t.challenge.dateLabel}</span>
-          <strong>{dateLabel}</strong>
-        </div>
+    <section className="classic-shell glass-panel fade-in-up">
+      <div className="game-toolbar game-toolbar--minimal">
+        <span className="topbar-chip topbar-chip--date">{dateLabel}</span>
 
-        <div className="date-badge">
-          <span>{t.classic.attempts}</span>
-          <strong>{progress.guesses.length} / 6</strong>
-        </div>
+        <span className="topbar-chip topbar-chip--attempts">{t.classic.attempts}: {progress.guesses.length} / 6</span>
 
         <div className={`state-badge ${progress.finished ? "is-complete" : "is-live"}`}>
           {progress.finished ? t.challenge.completed : t.status.available}
@@ -149,21 +142,12 @@ export default function CharacterDailyMode({ challenges, profiles, lang, t }) {
           ))}
         </datalist>
 
-        <button type="submit" className="classic-submit" disabled={progress.finished}>
+        <button type="submit" className="classic-submit pressable" disabled={progress.finished}>
           {t.classic.submit}
         </button>
       </form>
 
       {error ? <p className="classic-error">{error}</p> : null}
-
-      <div className="quick-picks">
-        <span className="quick-picks__label">{lang === "en" ? "Suggestions" : "Sugerencias"}</span>
-        <div className="quick-picks__grid">
-          {quickNames.map((name) => (
-            <button key={name} type="button" className="quick-pick" disabled={progress.finished} onClick={() => setInput(name)}>{name}</button>
-          ))}
-        </div>
-      </div>
 
       <div className="legend-row">
         <span className="legend-pill is-match">{t.classic.legendMatch}</span>
@@ -227,7 +211,7 @@ export default function CharacterDailyMode({ challenges, profiles, lang, t }) {
 
       {progress.finished ? (
         <div className="feedback-panel">
-          <div className={`feedback-state ${progress.solved ? "is-correct" : "is-wrong"}`}>
+          <div className={`feedback-state ${progress.solved ? "is-correct success-pop" : "is-wrong wrong-shake"}`}>
             {progress.solved ? t.classic.solved : t.classic.failed}
           </div>
 

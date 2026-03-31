@@ -1,71 +1,22 @@
 export const copy = {
   es: {
     brand: "Series Daily",
-    brandSub: "Daily TV challenges",
-    common: {
-      backHome: "Volver",
-      backFriends: "Volver a Friends"
-    },
+    brandSub: "Retos diarios de series",
+    common: { backHome: "Volver", backFriends: "Volver a Friends" },
     home: {
-      eyebrow: "Retos diarios de series míticas",
-      title: "Series míticas. Cada día.",
-      subtitle: "Entra, juega y vuelve mañana.",
-      infoPrimaryLabel: "Hoy",
-      infoPrimaryValue: "Friends · 5 modos",
-      infoSecondaryLabel: "Interfaz",
-      infoSecondaryValue: "Mobile first",
+      eyebrow: "RETOS DIARIOS DE SERIES MÍTICAS",
+      title: "Tu dosis diaria de series.",
+      subtitle: "Elige una serie y entra en el set de retos de hoy.",
       chooseSeries: "Elige serie",
-      chooseSeriesCopy: "Acceso rápido a cada serie y a sus modos diarios."
+      chooseSeriesCopy: ""
     },
-    status: {
-      available: "Disponible",
-      comingSoon: "Próximamente",
-      completed: "Completado"
-    },
-    cta: {
-      play: "Entrar",
-      soon: "Muy pronto",
-      open: "Abrir",
-      playToday: "Jugar hoy",
-      submit: "Adivinar"
-    },
+    status: { available: "Disponible", comingSoon: "Próximamente", completed: "Completado" },
+    cta: { play: "Entrar", soon: "Muy pronto", open: "Abrir", playToday: "Jugar hoy", submit: "Adivinar" },
     series: {
-      friends: {
-        kicker: "Ya jugable",
-        description: "Personaje, frases, emojis, trivia y foto revelada."
-      },
-      office: {
-        kicker: "En cola",
-        description: "Preparada para la siguiente expansión."
-      },
-      scrubs: {
-        kicker: "En cola",
-        description: "Lista para llegar después de Friends."
-      },
-      anhqv: {
-        kicker: "En cola",
-        description: "Más adelante con su propio tono."
-      }
-    },
-    friends: {
-      eyebrow: "Friends · Daily hub",
-      title: "Friends, hoy.",
-      subtitle: "Cinco modos diarios en una interfaz más clara y rápida.",
-      statusLabel: "Hoy",
-      statusValue: "Character · Quote · Emoji · Trivia · Reveal",
-      cards: {
-        characterTitle: "Modo personaje",
-        characterDesc: "Deducción por atributos con una interfaz mucho más clara.",
-        quoteTitle: "Modo frases",
-        quoteDesc: "Frases icónicas con respuesta rápida y visual.",
-        emojiTitle: "Modo emojis",
-        emojiDesc: "Adivina el personaje a partir de emojis.",
-        triviaTitle: "Modo trivia",
-        triviaDesc: "Pregunta diaria de la serie con respuesta rápida.",
-        pixelTitle: "Modo foto revelada",
-        pixelDesc: "Cinco intentos para descubrir quién es.",
-        action: "Jugar hoy"
-      }
+      friends: { kicker: "Ya jugable", description: "Personaje, frases, emojis, trivia y reveal." },
+      office: { kicker: "Ya jugable", description: "Oficina, humor incómodo y personajes marcados." },
+      scrubs: { kicker: "Ya jugable", description: "Hospital, amistad, frases y caos emocional." },
+      anhqv: { kicker: "Ya jugable", description: "Vecinos, caos comunitario y frases míticas." }
     },
     challenge: {
       dateLabel: "Hoy",
@@ -82,35 +33,22 @@ export const copy = {
       inputPlaceholder: "Escribe el nombre del personaje...",
       submit: "Adivinar",
       imageMissing: "Falta la imagen del reto de hoy.",
+      cluesLabel: "Pistas",
+      quoteLabel: "Frase",
+      emojiLabel: "Emoji",
       modes: {
-        quote: {
-          eyebrow: "Friends · Frases",
-          title: "Modo frases",
-          subtitle: "Una frase mítica y varias opciones."
-        },
-        emoji: {
-          eyebrow: "Friends · Emojis",
-          title: "Modo emojis",
-          subtitle: "Lee los emojis y adivina el personaje."
-        },
-        trivia: {
-          eyebrow: "Friends · Trivia",
-          title: "Modo trivia",
-          subtitle: "Una pregunta diaria de la serie."
-        },
-        pixel: {
-          eyebrow: "Friends · Reveal",
-          title: "Modo foto revelada",
-          subtitle: "Tienes cinco intentos y la imagen se va revelando."
-        }
+        quote: { eyebrow: "Modo frases", title: "Modo frases", subtitle: "Lee la frase y elige quién la dijo." },
+        emoji: { eyebrow: "Modo emojis", title: "Modo emojis", subtitle: "Descifra el personaje a partir de emojis." },
+        trivia: { eyebrow: "Modo trivia", title: "Modo trivia", subtitle: "Pregunta diaria con cuatro opciones." },
+        pixel: { eyebrow: "Modo reveal", title: "Modo reveal", subtitle: "Cinco intentos y una imagen que se revela al acertar." }
       }
     },
     classic: {
-      eyebrow: "Friends · Personajes",
+      eyebrow: "Modo personaje",
       title: "Modo personaje",
       subtitle: "Escribe un personaje y compara sus atributos con el objetivo del día.",
       inputLabel: "Tu intento",
-      inputPlaceholder: "Escribe Chandler Bing, Monica Geller...",
+      inputPlaceholder: "Escribe un personaje...",
       submit: "Probar",
       attempts: "Intentos",
       hint: "Pista",
@@ -122,226 +60,13 @@ export const copy = {
       emptyState: "Empieza escribiendo un personaje para ver cómo compara con el objetivo del día.",
       legendMatch: "Coincide",
       legendMiss: "No coincide",
-      headers: {
-        name: "Nombre",
-        group: "Grupo",
-        job: "Trabajo",
-        home: "Entorno",
-        romance: "Relación",
-        vibe: "Estilo"
-      },
+      headers: { name: "Nombre", group: "Grupo", job: "Trabajo", home: "Entorno", romance: "Relación", vibe: "Estilo" },
       values: {
-        group: {
-          main: "Principal",
-          side: "Secundario"
-        },
-        job: {
-          office: "Oficina",
-          fashion: "Moda",
-          science: "Ciencia",
-          actor: "Actor",
-          chef: "Chef",
-          music: "Música",
-          cafe: "Café",
-          otherjob: "Otro"
-        },
-        home: {
-          joeyflat: "Piso Joey",
-          monicaflat: "Piso Monica",
-          centralperk: "Central Perk",
-          other: "Otro"
-        },
-        romance: {
-          monica: "Monica",
-          rachel: "Rachel",
-          ross: "Ross",
-          chandler: "Chandler",
-          mike: "Mike",
-          single: "Nadie"
-        },
-        vibe: {
-          sarcastic: "Sarcástico",
-          stylish: "Con estilo",
-          academic: "Intelectual",
-          flirty: "Ligón",
-          organized: "Ordenada",
-          chaotic: "Caótica",
-          quiet: "Callado",
-          loud: "Escandalosa"
-        }
-      }
-    }
-  },
-  en: {
-    brand: "Series Daily",
-    brandSub: "Daily TV challenges",
-    common: {
-      backHome: "Back",
-      backFriends: "Back to Friends"
-    },
-    home: {
-      eyebrow: "Daily challenges for iconic shows",
-      title: "Iconic series. Every day.",
-      subtitle: "Jump in, play, come back tomorrow.",
-      infoPrimaryLabel: "Today",
-      infoPrimaryValue: "Friends · 5 modes",
-      infoSecondaryLabel: "Interface",
-      infoSecondaryValue: "Mobile first",
-      chooseSeries: "Choose series",
-      chooseSeriesCopy: "Quick access to each series and its daily modes."
-    },
-    status: {
-      available: "Available",
-      comingSoon: "Coming soon",
-      completed: "Completed"
-    },
-    cta: {
-      play: "Enter",
-      soon: "Soon",
-      open: "Open",
-      playToday: "Play today",
-      submit: "Guess"
-    },
-    series: {
-      friends: {
-        kicker: "Live now",
-        description: "Character, quotes, emoji, trivia and reveal."
-      },
-      office: {
-        kicker: "Queued",
-        description: "Prepared for the next expansion."
-      },
-      scrubs: {
-        kicker: "Queued",
-        description: "Ready to arrive after Friends."
-      },
-      anhqv: {
-        kicker: "Queued",
-        description: "Later on with its own tone."
-      }
-    },
-    friends: {
-      eyebrow: "Friends · Daily hub",
-      title: "Friends, today.",
-      subtitle: "Five daily modes in a cleaner, faster interface.",
-      statusLabel: "Today",
-      statusValue: "Character · Quote · Emoji · Trivia · Reveal",
-      cards: {
-        characterTitle: "Character mode",
-        characterDesc: "Attribute-based deduction with a much clearer interface.",
-        quoteTitle: "Quote mode",
-        quoteDesc: "Iconic quotes with fast, visual answers.",
-        emojiTitle: "Emoji mode",
-        emojiDesc: "Guess the character from emojis.",
-        triviaTitle: "Trivia mode",
-        triviaDesc: "A daily show question with a quick answer.",
-        pixelTitle: "Reveal mode",
-        pixelDesc: "Five attempts to discover who it is.",
-        action: "Play today"
-      }
-    },
-    challenge: {
-      dateLabel: "Today",
-      chooseLabel: "Choose an answer",
-      yourAnswer: "Your answer",
-      correctAnswer: "Correct answer",
-      correct: "Correct",
-      incorrect: "Wrong",
-      completed: "Already played today",
-      tomorrow: "Come back tomorrow for the next challenge.",
-      attemptsLabel: "Attempts",
-      remainingLabel: "Left",
-      hintLabel: "Hint",
-      inputPlaceholder: "Type the character name...",
-      submit: "Guess",
-      imageMissing: "Today's image is missing.",
-      modes: {
-        quote: {
-          eyebrow: "Friends · Quotes",
-          title: "Quote mode",
-          subtitle: "One iconic quote and several options."
-        },
-        emoji: {
-          eyebrow: "Friends · Emoji",
-          title: "Emoji mode",
-          subtitle: "Read the emojis and guess the character."
-        },
-        trivia: {
-          eyebrow: "Friends · Trivia",
-          title: "Trivia mode",
-          subtitle: "One daily question from the series."
-        },
-        pixel: {
-          eyebrow: "Friends · Reveal",
-          title: "Reveal mode",
-          subtitle: "You have five attempts and the image reveals itself."
-        }
-      }
-    },
-    classic: {
-      eyebrow: "Friends · Characters",
-      title: "Character mode",
-      subtitle: "Type a character and compare attributes against the daily target.",
-      inputLabel: "Your guess",
-      inputPlaceholder: "Type Chandler Bing, Monica Geller...",
-      submit: "Try",
-      attempts: "Attempts",
-      hint: "Hint",
-      notFound: "That character is not in the list.",
-      repeated: "You already tried that character.",
-      solved: "You got it.",
-      failed: "No attempts left.",
-      answer: "Correct character",
-      emptyState: "Start by typing a character to compare it against today's target.",
-      legendMatch: "Match",
-      legendMiss: "No match",
-      headers: {
-        name: "Name",
-        group: "Group",
-        job: "Job",
-        home: "Home",
-        romance: "Romance",
-        vibe: "Vibe"
-      },
-      values: {
-        group: {
-          main: "Main",
-          side: "Side"
-        },
-        job: {
-          office: "Office",
-          fashion: "Fashion",
-          science: "Science",
-          actor: "Actor",
-          chef: "Chef",
-          music: "Music",
-          cafe: "Cafe",
-          otherjob: "Other"
-        },
-        home: {
-          joeyflat: "Joey flat",
-          monicaflat: "Monica flat",
-          centralperk: "Central Perk",
-          other: "Other"
-        },
-        romance: {
-          monica: "Monica",
-          rachel: "Rachel",
-          ross: "Ross",
-          chandler: "Chandler",
-          mike: "Mike",
-          single: "Nobody"
-        },
-        vibe: {
-          sarcastic: "Sarcastic",
-          stylish: "Stylish",
-          academic: "Academic",
-          flirty: "Flirty",
-          organized: "Organized",
-          chaotic: "Chaotic",
-          quiet: "Quiet",
-          loud: "Loud"
-        }
+        group: { main: "Principal", side: "Secundario" },
+        job: { office: "Oficina", fashion: "Moda", science: "Ciencia", actor: "Actor", chef: "Chef", music: "Música", cafe: "Café", otherjob: "Otro", hospital: "Hospital", manager: "Gestión", sales: "Ventas", paper: "Papel", concierge: "Portería", landlord: "Presidente" },
+        home: { joeyflat: "Piso Joey", monicaflat: "Piso Monica", centralperk: "Central Perk", other: "Otro", office: "Oficina", hospital: "Hospital", building: "Edificio" },
+        romance: { monica: "Monica", rachel: "Rachel", ross: "Ross", chandler: "Chandler", mike: "Mike", single: "Nadie", pam: "Pam", jim: "Jim", eliot: "Elliot", jd: "J.D.", roberto: "Roberto", emilio: "Emilio", mariano: "Mariano", dwight: "Dwight" },
+        vibe: { sarcastic: "Sarcástico", stylish: "Con estilo", academic: "Intelectual", flirty: "Ligón", organized: "Ordenada", chaotic: "Caótica", quiet: "Callado", loud: "Escandalosa", awkward: "Incómodo", silly: "Payaso", intense: "Intenso", cynical: "Cínica", nosy: "Cotilla" }
       }
     }
   }

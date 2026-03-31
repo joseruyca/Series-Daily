@@ -1,6 +1,6 @@
-import FriendsChoiceModePage from "@/src/components/friends/FriendsChoiceModePage";
-import { friendsTriviaChallenges } from "@/src/data/friends-trivia";
+import SeriesChoicePage from "@/src/components/series/SeriesChoicePage";
+import { friendsTriviaChallenges } from "@/src/data/friends-dailies";
 
-export default function FriendsTriviaRoute() {
-  return <FriendsChoiceModePage mode="trivia" challenges={friendsTriviaChallenges} />;
+export default function Page() {
+  return <SeriesChoicePage slug="friends" seriesKey="friends" seriesTitle="Friends" mode="trivia" challenges={friendsTriviaChallenges} />;
 }

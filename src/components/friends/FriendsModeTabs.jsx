@@ -11,7 +11,7 @@ export default function FriendsModeTabs() {
   const tabs = [
     { href: "/friends/character", label: t.friends.modes.character.short },
     { href: "/friends/quote", label: t.friends.modes.quote.short },
-    { href: "/friends/emoji", label: t.friends.modes.emoji.short },
+    { href: "/friends/emojis", label: t.friends.modes.emoji.short },
     { href: "/friends/pixel", label: t.friends.modes.pixel.short },
   ];
 
